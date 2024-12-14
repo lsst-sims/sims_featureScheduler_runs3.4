@@ -1,8 +1,8 @@
-**Simulate BBH and NBH ToOs** (for lensed BNS and BBH see [https://github.com/fedhere/_scoc_/blob/main/ToOGWruns_lensedBNS.md](https://github.com/fedhere/_scoc_/blob/main/ToOGWruns_lensedBNS.md) and [https://github.com/lsst-sims/sims_featureScheduler_runs3.4/blob/main/too/ToOGWruns_BBH.md](https://github.com/lsst-sims/sims_featureScheduler_runs3.4/blob/main/too/ToOGWruns_BBH.md))
+**Simulate BBH and NBH ToOs** (for lensed BNS and BBH see [https://github.com/lsst-sims/sims_featureScheduler_runs3.4/blob/main/too/ToOGWruns_lensedBNS.md](https://github.com/lsst-sims/sims_featureScheduler_runs3.4/blob/main/too/ToOGWruns_lensedBNS.md) and [https://github.com/lsst-sims/sims_featureScheduler_runs3.4/blob/main/too/ToOGWruns_BBH.md](https://github.com/lsst-sims/sims_featureScheduler_runs3.4/blob/main/too/ToOGWruns_BBH.md))
 
 **Definition**:
 
-**N_O** = N Observable Triggers is the number of expected number of O5 all-sky events that will meet the selection cuts established in [https://lssttooworkshop.github.io/images/Rubin_2024_ToO_workshop_final_report.pdf](https://lssttooworkshop.github.io/images/Rubin_2024_ToO_workshop_final_report.pdf).
+**N_O** = N Observable Triggers is the number of expected O5 all-sky events that will meet the selection cuts established in [https://lssttooworkshop.github.io/images/Rubin_2024_ToO_workshop_final_report.pdf](https://lssttooworkshop.github.io/images/Rubin_2024_ToO_workshop_final_report.pdf) and are visible in the LSST sky. These are the numbers we find in the report.
 
 **N_t** = N Triggers is the number of all-sky alerts (produced by LKV or any other discovery survey) that meet our selection cuts, regardless of location
 
@@ -10,14 +10,14 @@
 
 **t0**: the time when the trigger is received by Rubin
 
-**Tw**: observability window as the time from the trigger to the end of visibility of a field in the area 
+**Tw**: observability window: the time from the trigger to the end of visibility of a field in the area 
 
 
 **SCHEMA**: 
 
-1) simulate N_t = 3xN_O
+1) simulate N_t = 3xN_O to account for visibility of all-sky targets
    
-3) follow up any of the area that is visible, regardless of the location of the trigger
+3) follow up fraction of localization area that is visible, regardless of the location of the trigger
 
 4) simulate 
 - 1 run with N=1/2 x N_t (downscope)
